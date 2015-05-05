@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "bank_account_number_validator"
-  gem.version       = BankAccountNumberValidator::VERSION
+  gem.version       = '0.0.1'
   gem.authors       = ["jacoobb"]
   gem.email         = ["mikrut.jakub@gmail.com"]
   gem.summary       = %q{Bank account number validator}
