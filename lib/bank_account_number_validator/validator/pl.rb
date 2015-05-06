@@ -1,6 +1,6 @@
 class BankAccountNumberValidator::Validator::Pl < BankAccountNumberValidator::Validator
   def initialize value: nil
-    @value = value
+    @value = value_to_array value
     @weight = [1,10,3,30,9,90,27,76,81,34,49,5,50,15,53,45,62,38,89,17,73,51,25,56,75,71,31,19,93,57]
   end
 
@@ -13,6 +13,10 @@ class BankAccountNumberValidator::Validator::Pl < BankAccountNumberValidator::Va
 
   
   private
+  
+    def value_to_array value
+      value.chars.map{|char| char.to_i}
+    end
 
     def length_valid
       @value.size == 26
