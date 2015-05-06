@@ -10,7 +10,6 @@ gem install bank_account_number_validator
 ```ruby
 gem 'bank_account_number_validator'
 ```
-cd ../
 ## Usage
 ```ruby
 validates :number, bank_account_number: true
