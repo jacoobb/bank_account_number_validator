@@ -1,2 +1,17 @@
 #!/usr/bin/env ruby
 require 'bank_account_number_validator'
+
+class DummyClass
+  include ActiveModel::Validations
+  
+  attr_reader :number
+
+  validates :number, bank_account_number: true
+
+  def initialize number: nil
+    @number = number
+  end
+end
+
+c = DummyClass.new number: '12'
+p c.valid?

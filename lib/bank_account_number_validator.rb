@@ -7,3 +7,5 @@ class BankAccountNumberValidator < ActiveModel::EachValidator
     end
   end
 end
+
+require 'bank_account_number_validator/validator'

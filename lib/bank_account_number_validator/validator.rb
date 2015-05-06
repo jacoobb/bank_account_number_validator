@@ -22,3 +22,5 @@ class BankAccountNumberValidator::Validator
       end
     end
 end
+
+require 'bank_account_number_validator/validator/pl'
